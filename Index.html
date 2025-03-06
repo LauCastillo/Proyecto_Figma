@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -9,19 +8,24 @@ HTML
         <link rel="stylesheet" href="./index.css">
     </head>
     <body>
-        <header>
-            <nav>
-                <img src>
-                <ul>
-                    <li><a href="#structure">Home</a></li>
-                    <li><a href="#Team">Projects</a></li>
-                    <li><a href="#Schedule">Service</a></li>
-                </ul>
-
-                <button class="contact">
-
-                </button>
-                <p>Contact Us</p>
-            </nav>
-        </header>
+        <nav class="navbar">
+            <div class="navbar-brand">Circle</div>
+            <div class="navbar-toggle" id="navbar-toggle">
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item"><a href="#home"
+                        class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="#projects"
+                        class="navbar-link">Projects</a></li>
+                <li class="navbar-item"><a href="#services"
+                        class="navbar-link">Services</a></li>
+                <li class="navbar-item"><a href="#contact"
+                        class="navbar-link navbar-link-contact">Contact
+                        Us</a></li>
+            </ul>
+        </nav>
+        <script src="scripts/navbar.js"></script>
     </body>

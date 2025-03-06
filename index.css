@@ -1,32 +1,79 @@
 html,
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    font-size: 10px;
-    line-height: 3.5em;
+    background-color: var(--blanco);
 }
 
-:root {
-    --Darkblue: #072AC8;
-    --Celete: #43D2FF;
-    --azul: #A2D6F9;
-    --azulClaro: #D1EDFF;
-    --carbón: #292E47;
-    --gris: #6B708D;
-    --blanco: #F2F4FC;
-    --blancoRoto: #ECF7FF;
-    --amarillo: #FFC600;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
 }
 
-button {
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--Darkblue);
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle-icon {
+    width: 25px;
+    height: 3px;
+    background-color: var(--carbón);
+    margin: 4px 0;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-left: 1em;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: var(--carbón);
+    font-size: 1em;
+}
+
+.navbar-link-contact {
     background-color: var(--Darkblue);
+    color: var(--blanco);
+    padding: 0.5em 1em;
+    border-radius: 5px;
 }
 
-button.contact {
-    width: 150px;
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-item {
+        margin: 0;
+        text-align: center;
+        padding: 1em 0;
+    }
 }
