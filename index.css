@@ -127,8 +127,7 @@ body {
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin-top: 40px;
-    /* Ajusta el margen superior para evitar superposición */
+    margin-top: 20px;
 }
 
 .logo-container {
@@ -147,6 +146,211 @@ body {
     margin: 0 10px;
     filter: grayscale(100%) brightness(0.5);
     color: var(--gris);
+}
+
+.projects-container {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.projects-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.projects-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    /* Mantener las cards en una fila */
+}
+
+.card {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin: 15px;
+}
+
+.card p {
+    font-size: 1em;
+    margin: 0 15px 15px;
+    color: var(--gris);
+}
+
+.card .learn-more {
+    display: block;
+    margin: 0 15px 15px;
+    color: var(--Darkblue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.testimonials-container {
+    background-color: var(--Darkblue);
+    color: var(--blanco);
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.testimonial-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--amarillo);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.testimonial-author img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.memoji {
+    position: absolute;
+    width: 100px;
+    height: auto;
+}
+
+.memoji-1 {
+    top: 20px;
+    left: 20px;
+}
+
+.memoji-2 {
+    top: 20px;
+    right: 20px;
+}
+
+.memoji-3 {
+    bottom: 20px;
+    left: 20px;
+}
+
+.memoji-4 {
+    bottom: 20px;
+    right: 20px;
+}
+
+.services-container {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    background-color: var(--blancoRoto);
+}
+
+.services-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.services-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    /* Mantener las cards en una fila */
+}
+
+.service-card {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+}
+
+.service-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin: 60px 0 15px 0;
+}
+
+.service-card p {
+    font-size: 1em;
+    margin: 0 0 15px 0;
+    color: var(--gris);
+}
+
+.service-card .learn-more {
+    display: block;
+    margin: 0 0 15px 0;
+    color: var(--Darkblue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 1440px) {
+
+    .projects-cards,
+    .services-cards {
+        flex-wrap: wrap;
+        /* Permitir que las cards se dispongan en una columna en pantallas más pequeñas */
+    }
+
+    .projects-cards .card,
+    .services-cards .service-card {
+        width: 30%;
+        /* Ajustar el ancho para que quepan tres cards por fila en pantallas medianas */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .projects-cards,
+    .services-cards {
+        flex-wrap: wrap;
+        /* Permitir que las cards se dispongan en una columna en pantallas más pequeñas */
+    }
+
+    .projects-cards .card,
+    .services-cards .service-card {
+        width: 45%;
+        /* Ajustar el ancho para que quepan dos cards por fila en pantallas medianas */
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -187,12 +391,19 @@ body {
         height: auto;
     }
 
-    .logo-container {
-        flex-direction: column;
-        height: auto;
+    .logo-carousel {
+        display: none;
     }
 
-    .logo-container img {
-        margin: 10px 0;
+    .projects-cards,
+    .services-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-cards .card,
+    .services-cards .service-card {
+        width: 90%;
+        margin-bottom: 20px;
     }
 }
