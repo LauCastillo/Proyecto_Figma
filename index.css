@@ -321,6 +321,68 @@ body {
     font-weight: bold;
 }
 
+.subscribe-container {
+    background-color: var(--amarillo);
+    color: var(--carbón);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+.subscribe-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.subscribe-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.subscribe-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.email-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.email-icon {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.email-input-container input[type="email"] {
+    padding-left: 40px;
+    /* Espacio para la imagen */
+    font-size: 1em;
+    border: 1px solid var(--carbón);
+    border-radius: 5px;
+    width: 300px;
+}
+
+.subscribe-container button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: var(--Darkblue);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-container button:hover {
+    background-color: var(--Celete);
+}
+
+
 @media (max-width: 1440px) {
 
     .projects-cards,
@@ -334,6 +396,57 @@ body {
         width: 30%;
         /* Ajustar el ancho para que quepan tres cards por fila en pantallas medianas */
         margin-bottom: 20px;
+    }
+
+    .footer {
+        background-color: var(--blancoRoto);
+        color: var(--carbón);
+        padding: 40px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-logo {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .footer-logo h2 {
+        font-size: 1.5em;
+        color: var(--Darkblue);
+    }
+
+    .footer-logo p {
+        font-size: 1em;
+        color: var(--gris);
+    }
+
+    .footer-links {
+        display: flex;
+        flex: 2;
+        justify-content: space-around;
+        min-width: 200px;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        text-decoration: none;
+        color: var(--carbón);
+        font-size: 1em;
+    }
+
+    .footer-links ul li a:hover {
+        color: var(--Darkblue);
     }
 }
 
@@ -405,5 +518,36 @@ body {
     .services-cards .service-card {
         width: 90%;
         margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .subscribe-container form {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .subscribe-container input[type="email"] {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-logo,
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            flex-direction: column;
+        }
+
+        .footer-links ul {
+            margin-bottom: 20px;
+        }
     }
 }
