@@ -3,14 +3,25 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    width: 100%;
     background-color: var(--blanco);
 }
 
-.navbar {
+.main-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navbar {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
     align-items: center;
-    padding: 1em;
+    justify-content: space-between;
 }
 
 .navbar-brand {
@@ -33,14 +44,16 @@ body {
 }
 
 .navbar-menu {
+    width: 50%;
     display: flex;
     list-style: none;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
 }
 
 .navbar-item {
-    margin-left: 1em;
+    margin-left: 0px;
 }
 
 .navbar-link {
@@ -49,26 +62,30 @@ body {
     font-size: 1em;
 }
 
-.navbar-link-contact {
+.boton {
+    text-decoration: none;
+    font-size: 1em;
     background-color: var(--Darkblue);
     color: var(--blanco);
     padding: 0.5em 1em;
-    border-radius: 5px;
+}
+
+.separador-derecha {
+    margin-right: 30px;
 }
 
 .container {
-    width: 1100px;
-    height: 650px;
+
+
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
+
+    margin: 50px auto;
 }
 
 .left-container,
 .right-container {
-    width: 50%;
-    height: 100%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,7 +93,8 @@ body {
 }
 
 .left-container {
-    text-align: center;
+    align-items: start;
+    text-align: left;
 }
 
 .right-container {
@@ -85,11 +103,8 @@ body {
 
 .right-container .main-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    height: 100%;
+
 }
 
 .right-container .main-image img {
@@ -103,13 +118,14 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
 }
 
 .right-container .small-images img:first-child {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px;
+    width: 33%;
     height: auto;
     margin: 5px;
 }
@@ -118,7 +134,7 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100px;
+    width: 33%;
     height: auto;
     margin: 5px;
 }
@@ -148,23 +164,35 @@ body {
     color: var(--gris);
 }
 
-.projects-container {
+.card-container {
     width: 100%;
     padding: 40px 0;
-    text-align: center;
+    text-align: left;
 }
 
-.projects-container h2 {
+.card-container h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-.projects-cards {
+.wrapper-cards {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
     flex-wrap: nowrap;
     /* Mantener las cards en una fila */
+}
+
+.wrapper-cards,
+.services-cards {
+    flex-wrap: wrap;
+    /* Permitir que las cards se dispongan en una columna en pantallas más pequeñas */
+}
+
+.wrapper-cards .card,
+.services-cards .service-card {
+    width: 30%;
+    /* Ajustar el ancho para que quepan tres cards por fila en pantallas medianas */
+    margin-bottom: 20px;
 }
 
 .card {
@@ -182,7 +210,7 @@ body {
 }
 
 .card h3 {
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 15px;
 }
 
@@ -264,6 +292,7 @@ body {
 }
 
 .services-container {
+    display: flex;
     width: 100%;
     padding: 40px 0;
     text-align: center;
@@ -272,7 +301,7 @@ body {
 
 .services-container h2 {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .services-cards {
@@ -288,34 +317,33 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px;
+    width: 30%;
     text-align: left;
-    padding: 20px;
+
     position: relative;
 }
 
 .service-icon {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+
+    margin: 15px 15px 0px 15px;
     width: 40px;
     height: 40px;
 }
 
 .service-card h3 {
-    font-size: 1.5em;
-    margin: 60px 0 15px 0;
+    font-size: 1em;
+    margin: 15px;
 }
 
 .service-card p {
     font-size: 1em;
-    margin: 0 0 15px 0;
+    margin: 0 15px 15px;
     color: var(--gris);
 }
 
 .service-card .learn-more {
     display: block;
-    margin: 0 0 15px 0;
+    margin: 0 15px 15px;
     color: var(--Darkblue);
     text-decoration: none;
     font-weight: bold;
@@ -385,18 +413,7 @@ body {
 
 @media (max-width: 1440px) {
 
-    .projects-cards,
-    .services-cards {
-        flex-wrap: wrap;
-        /* Permitir que las cards se dispongan en una columna en pantallas más pequeñas */
-    }
 
-    .projects-cards .card,
-    .services-cards .service-card {
-        width: 30%;
-        /* Ajustar el ancho para que quepan tres cards por fila en pantallas medianas */
-        margin-bottom: 20px;
-    }
 
     .footer {
         background-color: var(--blancoRoto);
