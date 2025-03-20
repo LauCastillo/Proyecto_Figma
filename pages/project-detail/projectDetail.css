@@ -1,0 +1,37 @@
+.project-container {
+    margin: 0 auto;
+}
+
+.project-description {
+    font-size: 1em;
+    color: var(--gris);
+}
+
+.project-image-container {
+    display: flex;
+    justify-items: center;
+    height: 444px;
+    overflow: hidden;
+    margin-bottom: 34px;
+}
+
+.project-container h1 {
+    margin-bottom: 15px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+}
+
+.text-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.text-details span {
+    font-size: 1em;
+    margin: 0 15px 15px;
+    color: var(--gris);
+}

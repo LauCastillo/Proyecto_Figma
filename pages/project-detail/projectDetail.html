@@ -4,23 +4,127 @@
         <meta charset="utf-8">
         <title>HTML</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./homePage.css">
-        <link rel="stylesheet" href="/estilo.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/_colors.css">
+        <link rel="stylesheet" href="./projectDetail.css">
     </head>
     <body>
-        <header>
-            <nav>
-                <img src>
-                <ul>
-                    <li><a href="#structure">Home</a></li>
-                    <li><a href="#Team">Projects</a></li>
-                    <li><a href="#Schedule">Service</a></li>
+        <div class="main-container">
+            <nav class="navbar">
+                <div class="navbar-brand">Circle</div>
+                <div class="navbar-toggle" id="navbar-toggle">
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                </div>
+                <ul class="navbar-menu" id="navbar-menu">
+                    <li class="navbar-item"><a href="#home"
+                            class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="#projects"
+                            class="navbar-link">Projects</a></li>
+                    <li class="navbar-item"><a href="#services"
+                            class="navbar-link">Services</a></li>
+                    <li class="navbar-item"><a href="#contact"
+                            class="navbar-link boton">Contact
+                            Us</a></li>
                 </ul>
-
-                <button class="contact">
-
-                </button>
-                <p>Contact Us</p>
             </nav>
-        </header>
-    </body>
+            <div class="project-container">
+                <h1>Simplify</h1>
+                <div class="text-details">
+                    <span>UI Design & App Development</span>
+                    <span>Completed on June 22, 2021</span>
+                </div>
+                <div class="project-description">
+                    <div class="project-image-container">
+                        <img class="project-image" src="/Images/1.jpg"
+                            alt="Project 1">
+                    </div>
+                    <p>CAliqua id fugiat nostrud irure ex duis ea quis id quis
+                        ad et. Sunt qui esse pariatur duis deserunt mollit
+                        dolore cillum minim tempor enim. Elit aute irure tempor
+                        cupidatat incididunt sint deserunt ut voluptate aute id
+                        deserunt nisi. Aliqua id fugiat nostrud irure ex duis ea
+                        quis id quis ad et. Sunt qui esse pariatur duis deserunt
+                        mollit dolore cillum minim tempor enim. Elit aute irure
+                        tempor cupidatat incididunt sint deserunt ut voluptate
+                        aute id deserunt nisi.Aliqua id fugiat nostrud irure ex
+                        duis ea quis id quis ad et. Sunt quix duis ea quis id
+                        quis ad et. Sunt qui esse pariatur duis deserunt mollit
+                        dolore cillum minim tempor enim. Elit aute irure tempor
+                        cupidatat incididunt sint deserunt ut voluptate aute id
+                        deserunt nisi.</p>
+                    <p>id fugiat nostrud irure ex
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis
+                        ad et. Sunt qui esse pariatur duis deserunt mollit
+                        dolore cillum minim tempor enim. Elit aute irure tempor
+                        cupidatat incididunt sint deserunt ut voluptate aute id
+                        deserunt nisi.Aliqua id fugiat nostrud irure ex duis ea
+                        quis id quis ad e dolore cillum minim tempor enim. Elit
+                        aute irure tempor cupidatat incididunt sint deserunt ut
+                        voluptate aute id deserunt nisis ea quis id quis ad et.
+                        Sunt qui esse pariatur duis deserunt mollit dolore
+                        cillum minim tempor enim. Elit aute irure tempor
+                        cupidatat incididunt sint deserunt ut voluptate aute id
+                        deserunt nisi.Aliqua id fugiat nostrud irure ex duis ea
+                        quis id quis ad e dolore cillum minim tempor enim. Elit
+                        aute irure tempor cupidatat incididunt sint deserunt ut
+                        voluptate aute id deserunt nis cillum minim tempor enim.
+                    </p>
+                </div>
+                <div class="card-container">
+                    <h2>Recent Projects</h2>
+                    <div class="wrapper-cards">
+                        <div class="card">
+                            <img src="/Images/4.jpg" alt="Project 4">
+                            <h3>Orbit</h3>
+                            <p>UI Design</p>
+                            <a href="#" class="learn-more">Learn more</a>
+                        </div>
+                        <div class="card">
+                            <img src="/Images/5.jpg" alt="Project 5">
+                            <h3>Purify</h3>
+                            <p>UI/UX Design</p>
+                            <a href="#" class="learn-more">Learn more</a>
+                        </div>
+                        <div class="card">
+                            <img src="/Images/6.jpg" alt="Project 6">
+                            <h3>CryptoPie</h3>
+                            <p>App Development</p>
+                            <a href="#" class="learn-more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="subscribe-container">
+                    <h2>Do you have any questions?</h2>
+                    <p>Let us help you!</p>
+                    <form>
+                        <div class="email-input-container">
+                            <img src="/Images/mail.svg" alt="Email Icon"
+                                class="email-icon">
+                            <input type="email"
+                                placeholder="Enter your email"
+                                required>
+                        </div>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <footer class="footer">
+                    <div class="footer-logo">
+                        <h2>Circle</h2>
+                        <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </body>
+    </html>

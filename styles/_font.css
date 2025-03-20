@@ -1,7 +1,10 @@
+html,
 body {
     font-family: 'Roboto', sans-serif;
-    color: #2D2D3A;
-    /* Ajusta el color según lo necesario */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--blanco);
 }
 
 h1 {

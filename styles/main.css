@@ -1,2 +1,321 @@
 @import url(/styles/_colors.css);
 @import url(/styles/_font.css);
+
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navbar {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--Darkblue);
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle-icon {
+    width: 25px;
+    height: 3px;
+    background-color: var(--carbón);
+    margin: 4px 0;
+}
+
+.navbar-menu {
+    width: 75%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-left: 0px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: var(--carbón);
+    font-size: 1em;
+}
+
+.boton {
+    text-decoration: none;
+    font-size: 1em;
+    background-color: var(--Darkblue);
+    color: var(--blanco);
+    padding: 0.5em 1em;
+}
+
+.separador-derecha {
+    margin-right: 30px;
+}
+
+.card-container {
+    width: 100%;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.card-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.wrapper-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* Mantener las cards en una fila */
+}
+
+.wrapper-cards,
+.services-cards {
+    flex-wrap: wrap;
+    /* Permitir que las cards se dispongan en una columna en pantallas más pequeñas */
+}
+
+.wrapper-cards .card,
+.services-cards .service-card {
+    width: 30%;
+    /* Ajustar el ancho para que quepan tres cards por fila en pantallas medianas */
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    font-size: 1em;
+    margin: 15px;
+}
+
+.card p {
+    font-size: 1em;
+    margin: 0 15px 15px;
+    color: var(--gris);
+}
+
+.card .learn-more {
+    display: block;
+    margin: 0 15px 15px;
+    color: var(--Darkblue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.subscribe-container {
+    background-color: var(--amarillo);
+    color: var(--carbón);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+.subscribe-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.subscribe-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.subscribe-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.email-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.email-icon {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.email-input-container input[type="email"] {
+    padding-left: 40px;
+    /* Espacio para la imagen */
+    font-size: 1em;
+    border: 1px solid var(--carbón);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.subscribe-container button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: var(--Darkblue);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-container button:hover {
+    background-color: var(--Celete);
+}
+
+
+
+.footer {
+    color: var(--carbón);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+    width: 50%;
+}
+
+.footer-logo h2 {
+    font-size: 1.5em;
+    color: var(--Darkblue);
+}
+
+.footer-logo p {
+    font-size: 1em;
+    color: var(--gris);
+}
+
+.footer-links {
+    width: 50%;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+    flex: 1 0 21%
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: var(--carbón);
+    font-size: 1em;
+}
+
+.footer-links ul li a:hover {
+    color: var(--Darkblue);
+}
+
+@media (max-width: 480px) {
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-item {
+        margin: 0;
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    .wrapper-cards,
+    .services-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        /* Permitir que las cards se dispongan en una columna en pantallas más pequeñas */
+    }
+
+    .wrapper-cards .card,
+    .wrapper-cards .service-card {
+        width: 85%;
+        /* Ajustar el ancho para que quepan dos cards por fila en pantallas medianas */
+        margin-bottom: 20px;
+    }
+
+    .subscribe-container form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .subscribe-container input[type="email"] {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-links {
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        flex-direction: row;
+    }
+
+    .footer-links ul {
+        margin-bottom: 20px;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+        flex: 1 0 75%
+    }
+
+}
