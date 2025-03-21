@@ -2,9 +2,84 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>HTML</title>
+        <title>Contact Us</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/main.css">
         <link rel="stylesheet" href="./contact.css">
-        <link rel="stylesheet" href="/estilo.css">
     </head>
     <body>
+        <div class="main-container">
+            <nav class="navbar">
+                <div class="navbar-brand">Circle</div>
+                <div class="navbar-toggle" id="navbar-toggle">
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                </div>
+                <ul class="navbar-menu" id="navbar-menu">
+                    <li class="navbar-item"><a href="#home"
+                            class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="#projects"
+                            class="navbar-link">Projects</a></li>
+                    <li class="navbar-item"><a href="#services"
+                            class="navbar-link">Services</a></li>
+                    <li class="navbar-item"><a href="#contact"
+                            class="navbar-link boton">Contact
+                            Us</a></li>
+                </ul>
+            </nav>
+            <div class="contact-container">
+                <h4>Contact Us</h4>
+                <form class="contact-form">
+                    <div class="form-group form-group-full">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name"
+                            class="form-control"
+                            placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group two-columns">
+                        <div class="form-group-half">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email"
+                                class="form-control"
+                                placeholder="Enter your email address"
+                                type="email">
+                        </div>
+                        <div class="form-group-half">
+                            <label for="phone">Phone</label>
+                            <input type="phone" id="phone" name="phone"
+                                class="form-control"
+                                placeholder="Enter your phone number"
+                                type="tel" pattern="[0-9]{9}">
+                        </div>
+                    </div>
+                    <div class="form-group
+                        form-group-full">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message"
+                            class="form-control"
+                            placeholder="Write your message here..."
+                            minlength="5" maxlength="500"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+            <footer class="footer">
+                <div class="footer-logo">
+                    <h2>Circle</h2>
+                    <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
