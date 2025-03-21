@@ -50,13 +50,15 @@
 
 .navbar-item {
     margin-left: 0px;
+    color: var(--Darkblue);
 }
 
 .navbar-link {
     text-decoration: none;
-    color: var(--carbón);
+    color: var(--gris);
     font-size: 1em;
 }
+
 
 .boton {
     text-decoration: none;
